@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Assigment</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+	<title>Web Development Assigment</title>
 </head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	header {
+		position: sticky;
+		width: 100%;
+		top: 0;
+		z-index: 5;
+		background-color: white;
+		padding: 12px 0px;
+	}
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	.flex-items {
+		text-align: center;
+		font-size: 30px;
+		font-family: 'Courier New', Courier, monospace;
+		display: flex;
+	}
+
+	.flex-items_fill {
+		flex: 1 0 0;
+		align-items: center;
+	}
+
+	.flex-items_fill:last-child {
+		justify-content: flex-end;
+	}
+
+	.wrapper a {
+		all: unset;
+	}
+
+	.wrapper a:hover {
+		background-color: pink;
+		color: rgb(255, 86, 86);
+	}
+
+	.main {
+		height: 100%;
+		width: 100%;
+		display: block;
+	}
+
+	.main img {
+		max-width: 100%;
+		height: auto;
+		border-style: none;
+		vertical-align: top;
+		opacity: 1;
+		z-index: -1;
+	}
+
+	.main .main_container {
+		position: absolute;
+		padding: 0 24px;
+		width: 50%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	.main #main_button {
+		position: absolute;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		transform: scale(1);
+		transform-origin: left center;
+		z-index: -1;
+	}
+
+	.main #main_button .main_button_container {
+		background-color: green;
+	}
+</style>
+
 <body>
-   <p>Try some ziheng is gay</p> 
+	<header>
+		<div class="wrapper">
+			<div class="flex-items flex-items_fill"><a href="#shop_us">shop us &nbsp;</a><a href="#contact_us">contact
+					us&nbsp;</a><a href="#about">about&nbsp;</a></div>
+			<div class="flex-items flex-items_logo">Hydrate bottle</div>
+			<div class="flex-items flex-items_fill"><img alt="login" src="login logo.png"><img alt="login"
+					src="search logo.png"><img alt="login" src="cart logo.png"></div>
+		</div>
+	</header>
+
+	<div class="main">
+		<img src="main.webp" alt='' class="main">
+		<div class="main_container">
+			<h4>OUR BESTSELLERS</h4>
+			<h2>THE ULTIMATE BOTTLE COLLECTION!</h2>
+			<div id="main_button"><div class="main_button_container">SHOP NOW</div>
+		</div>
+
+
+
+	</div>
 </body>
+
 </html>
