@@ -81,18 +81,35 @@
 	}
 
 	.main #main_button {
-		position: absolute;
-		content: "";
-		display: block;
-		width: 100%;
-		height: 100%;
-		transform: scale(1);
-		transform-origin: left center;
-		z-index: -1;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		opacity: 1;
+		position: relative;
+		display: inline-block;
+		padding: 12px 60px;
+		line-height: normal;
+		border: 1px solid green;
+		background-color: green;
+		z-index: 1;
+		border-radius: 8px;
 	}
 
-	.main #main_button .main_button_container {
-		background-color: green;
+	.main #main_button::after {
+		content: "";
+		display: block;
+		text-align: center;
+		z-index: -1;
+		border-radius: 8px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.main #main_button::hover {
+		background-color: white;
+		border: 1px solid white;
+		transition: all 2s;
 	}
 </style>
 
@@ -102,8 +119,11 @@
 			<div class="flex-items flex-items_fill"><a href="#shop_us">shop us &nbsp;</a><a href="#contact_us">contact
 					us&nbsp;</a><a href="#about">about&nbsp;</a></div>
 			<div class="flex-items flex-items_logo">Hydrate bottle</div>
-			<div class="flex-items flex-items_fill"><img alt="login" src="login logo.png"><img alt="login"
-					src="search logo.png"><img alt="login" src="cart logo.png"></div>
+			<div class="flex-items flex-items_fill">
+				<a href="#login"><img alt="login" src="login logo.png"></a>
+				<a href="#search"><img alt="login" src="search logo.png"></a>
+				<a href="#cart"><img alt="login" src="cart logo.png"></a>
+			</div>
 		</div>
 	</header>
 
@@ -112,12 +132,12 @@
 		<div class="main_container">
 			<h4>OUR BESTSELLERS</h4>
 			<h2>THE ULTIMATE BOTTLE COLLECTION!</h2>
-			<div id="main_button"><div class="main_button_container">SHOP NOW</div>
+			<div id="main_button"><a>SHOP NOW</a>
+			</div>
+
+
+
 		</div>
-
-
-
-	</div>
 </body>
 
 </html>
